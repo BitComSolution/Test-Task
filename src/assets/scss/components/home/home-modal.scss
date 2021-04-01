@@ -1,0 +1,37 @@
+.home-modal {
+  width: 500px;
+  margin: auto;
+  background-color: $white-color;
+  border-radius: $block-radius;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    cursor: pointer;
+
+    --test-fonts--icon-color: #{$brand-color};
+  }
+}
+
+.home-modal__head {
+  padding: $default-offset 9px 11px;
+}
+
+.home-modal__body {
+  border-top: 1px solid $line-color;
+  border-bottom: 1px solid $line-color;
+  padding: 8px 13px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.home-modal__foot {
+  display: flex;
+  align-items: center;
+  padding: 8px 13px;
+
+  .button--primary {
+    margin-left: auto;
+  }
+}

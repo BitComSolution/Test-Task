@@ -1,0 +1,41 @@
+:root {
+  @include map($root, 'desktop');
+}
+
+@include lg() {
+  :root {
+    @include map($root, 'lg');
+  }
+}
+
+@include md() {
+  :root {
+    @include map($root, 'md');
+  }
+}
+
+@include sm() {
+  :root {
+    @include map($root, 'sm');
+  }
+}
+
+@include xs() {
+  :root {
+    @include map($root, 'xs');
+  }
+}
+
+html:not([data-theme]) {
+  @include map($themes, 'light');
+}
+
+html[data-theme*=dark] {
+  @include map($themes, 'dark');
+}
+
+@include reset();
+
+@include declareAnimate($animations);
+
+//@include debug();

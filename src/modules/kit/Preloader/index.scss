@@ -1,0 +1,58 @@
+@import "../../../assets/scss/shared";
+
+.preloader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: $layout-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+
+  svg {
+    width: 100%;
+    height: 250px;
+    font-size: 170px;
+  }
+}
+
+.preloader__text {
+  fill: none;
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+
+  &:nth-child(5n + 1) {
+    stroke: $brand-color;
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+  }
+
+  &:nth-child(5n + 2) {
+    stroke: #b6b6b6;
+    -webkit-animation-delay: -2.4s;
+    animation-delay: -2.4s;
+  }
+
+  &:nth-child(5n + 3) {
+    stroke: $brand-color;
+    -webkit-animation-delay: -3.6s;
+    animation-delay: -3.6s;
+  }
+
+  &:nth-child(5n + 4) {
+    stroke: #b6b6b6;
+    -webkit-animation-delay: -4.8s;
+    animation-delay: -4.8s;
+  }
+
+  &:nth-child(5n + 5) {
+    stroke: $brand-color;
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+  }
+}

@@ -1,0 +1,59 @@
+@include fontFace('../../../fonts/montserrat/medium', 'Montserrat-Medium', 'Montserrat', 500);
+
+@include typography() {
+  body {
+
+    @include font(inherit 0 1 400) {
+      font-family: $family;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    outline: 0;
+
+    &:not([class]) {
+      color: $brand-color;
+      transition: $move-ease;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-color;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 32.5px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  b, strong {
+    font-weight: 700;
+  }
+
+  button {
+    transform: $move-ease;
+    cursor: pointer;
+  }
+
+  input[type=checkbox], input[type=radio] {
+    display: none;
+  }
+}

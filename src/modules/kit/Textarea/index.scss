@@ -1,0 +1,31 @@
+@import "../../../assets/scss/shared";
+
+.textarea--primary {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  textarea {
+    @include font($text-color 16px 24px 500);
+    min-height: 130px;
+    padding: 10px;
+    background-color: $input-bg-color;
+    border: 0;
+    outline: none;
+    flex: 1 1;
+    resize: none;
+    max-height: 200px;
+    @include placeholder(color, $label-color);
+    @include placeholder(opacity, .7);
+  }
+
+  label {
+    @include font($text-color 16px 21px 500);
+    width: #{'min(160px, 100%)'};
+    margin-right: auto;
+  }
+}

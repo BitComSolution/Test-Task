@@ -1,0 +1,15 @@
+@function isTrue($expression, $isExpTrue, $isExpFalse) {
+  @if $expression {
+    @return $isExpTrue
+  } @else {
+    @return $isExpFalse
+  }
+}
+
+@function important($base, $exponent) {
+  $result: $base;
+
+  $result: $result #{$exponent};
+
+  @return $result;
+}

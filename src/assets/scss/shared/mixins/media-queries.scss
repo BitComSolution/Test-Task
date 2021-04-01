@@ -1,0 +1,89 @@
+$CASE_LG: 1420px;
+$CASE_MD: 1200px;
+$CASE_SM: 992px;
+$CASE_XS: 768px;
+$CASE_LESS: 320px;
+
+@mixin media($property, $value) {
+  @if $property == max {
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else if $property == min {
+    @media screen and (min-width: $value + 1) {
+      @content;
+    }
+  }
+}
+
+@mixin min($width) {
+  @include media(min, $width) {
+    @content;
+  }
+}
+
+@mixin max($width) {
+  @include media(max, $width) {
+    @content;
+  }
+}
+
+@mixin lg($value: false) {
+  @if type_of($value) == string {
+    @include min($CASE_LG) {
+      @content;
+    }
+  } @else {
+    @include max($CASE_LG) {
+      @content;
+    }
+  }
+}
+
+@mixin md($value: false) {
+  @if type_of($value) == string {
+    @include min($CASE_MD) {
+      @content;
+    }
+  } @else {
+    @include max($CASE_MD) {
+      @content;
+    }
+  }
+}
+
+@mixin sm($value: false) {
+  @if type_of($value) == string {
+    @include min($CASE_SM) {
+      @content;
+    }
+  } @else {
+    @include max($CASE_SM) {
+      @content;
+    }
+  }
+}
+
+@mixin xs($value: false) {
+  @if type_of($value) == string {
+    @include min($CASE_XS) {
+      @content;
+    }
+  } @else {
+    @include max($CASE_XS) {
+      @content;
+    }
+  }
+}
+
+@mixin less($value: false) {
+  @if type_of($value) == string {
+    @include min($CASE_LESS) {
+      @content;
+    }
+  } @else {
+    @include max($CASE_LESS) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../assets/scss/shared";
+
+[class*=text--] {
+  color: $text-color;
+  font-weight: 500;
+}
+
+.text--lg {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text--md {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.text--sm {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.text--xs {
+  font-size: 12px;
+  line-height: 15px;
+}

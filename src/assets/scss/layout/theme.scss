@@ -1,0 +1,27 @@
+$themes: (
+  light: (
+    general: (
+      layout-color: #e6e8ef,
+      brand-color: #3ba9fd,
+      white-color: #ffffff,
+      black-color: #000000,
+      line-color: #f0f0f0,
+    ),
+    accent: (
+      action-color: #91b3cd,
+      active-color: #0224cd,
+    ),
+    ui: (
+      input-bg-color: transparent,
+      button-color: #8ed1f3,
+      button-hover-color: #a2d3ec,
+      button-active-color: #4aa1cd,
+    ),
+    fonts: (
+      label-color: #adaeb1,
+      text-color: #494949,
+      icon-color: #b0b7cb,
+    ),
+  ),
+  dark: (),
+);

@@ -1,0 +1,15 @@
+@import "../../../assets/scss/shared";
+
+[class*=modal--] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.modal--primary {
+  background-color: #333333a1;
+  padding: $default-offset;
+}

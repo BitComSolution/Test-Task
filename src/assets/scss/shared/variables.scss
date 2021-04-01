@@ -1,0 +1,46 @@
+// Variables:
+//
+// Should type for: | `$element-state-property`
+//                  | `$state-property`
+//                  | `$property`
+
+//Default colors:
+
+$primary-color: #4359d2;
+$success-color: #1b7c46;
+$danger-color: #ff0000;
+$warning-color: #ed8e00;
+
+//general colors:
+
+$brand-color: var(--test-general--brand-color);
+$layout-color: var(--test-general--layout-color);
+$white-color: var(--test-general--white-color);
+$black-color: var(--test-general--black-color);
+$line-color: var(--test-general--line-color);
+
+//accent colors:
+
+$active-color: var(--test-accent--active-color);
+$action-color: var(--test-accent--action-color);
+
+//font colors:
+
+$text-color: var(--test-fonts--text-color);
+$label-color: var(--test-fonts--label-color);
+$icon-color: var(--test-fonts--icon-color);
+
+//ui colors:
+
+$input-bg-color: var(--test-ui--input-bg-color);
+$button-color: var(--test-ui--button-color);
+$button-hover-color: var(--test-ui--button-hover-color);
+$button-active-color: var(--test-ui--button-active-color);
+
+//Media:
+
+$move-ease: all .3s ease;
+$default-offset: 15px;
+$block-radius: 13px;
+$shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+$family: 'Montserrat', sans-serif;

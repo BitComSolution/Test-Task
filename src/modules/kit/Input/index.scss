@@ -1,0 +1,28 @@
+@import "../../../assets/scss/shared";
+
+[class*=input--] {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  flex-wrap: wrap;
+
+  input {
+    color: $text-color;
+    background-color: $input-bg-color;
+    box-shadow: $shadow;
+    outline: none;
+    width: 100%;
+    border-radius: $block-radius;
+    @include placeholder(opacity, .7);
+    @include placeholder(color, $label-color);
+  }
+
+  label {
+    @include font($text-color 16px 24px 500);
+    width: #{'min(160px, 100%)'};
+    margin-right: auto;
+    padding-right: $default-offset;
+  }
+}

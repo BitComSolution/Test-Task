@@ -1,0 +1,34 @@
+@mixin parsingProperties($value, $key) {
+  @if type_of($value) == map {
+    @each $index, $total in $value {
+      --test-#{$key}--#{$index}: #{$total};
+    }
+  } @else {
+    --test-#{$key}: #{$value};
+  }
+}
+
+@mixin map($array-map, $key-map) {
+
+  $arr: map-get($array-map, $key-map);
+
+  @each $key, $value in $arr {
+    @include parsingProperties($value, $key)
+  }
+}
+
+@mixin declareAnimate($type) {
+  @each $index, $total in $type {
+    $arr1: map-get($type, $index);
+
+    @keyframes #{$index} {
+      @each $key, $amount in $arr1 {
+        @each $keyValue, $name in $amount {
+          #{$key} {
+            #{$keyValue}: #{$name};
+          }
+        }
+      }
+    }
+  }
+}

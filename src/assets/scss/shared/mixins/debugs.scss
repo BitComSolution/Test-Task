@@ -1,0 +1,13 @@
+@mixin layer2($depth: .09, $color: #dc3545) {
+  $value: 1 - .09;
+
+  html * {
+    background-color: fade_out($color, $value);
+  }
+}
+
+@mixin debug($debug-color: #f00) {
+  html > * {
+    @include font($debug-color 13px 1, !important);
+  }
+}

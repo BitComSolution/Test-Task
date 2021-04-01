@@ -1,0 +1,30 @@
+@import "../../../assets/scss/shared";
+
+[class*=button--] {
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: $move-ease;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button--primary {
+  @include font($white-color 11px 32px 600);
+  cursor: pointer;
+  background-color: $brand-color;
+  border-radius: 30px;
+  padding: 0 20px;
+
+  &:hover {
+    --test-general--brand-color: #{$button-hover-color}
+  }
+
+  &:active {
+    --test-ui--button-hover-color: #{$button-active-color}
+  }
+}
