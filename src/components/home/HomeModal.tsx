@@ -1,4 +1,3 @@
-import '../../assets/scss/components/home/index.scss';
 import React, { FC, ReactElement, useState } from 'react';
 import { IconClose, IconFacebook, IconGlobal, IconUser } from '../../modules/icons';
 import Avatar from '../../modules/kit/Avatar';
